@@ -5,7 +5,7 @@ def menu():
     print('2: Subtract -')
     print('3: Multiply x')
     print('4: Division /')
-    print('0: Exit')
+    print('Press any other number to exit')
     print()
 
 
@@ -26,20 +26,25 @@ def dividenums(x,y):
 
 
 # main program starts here
-num1 = int(input('enter first number'))
-num2 = int(input('enter second number'))
-menu()
-choice: int = int(input('What do you want to do?'))
+choice = 0
 
-if choice == 0:
-    print('ending')
-elif choice == 1:
-    print(addnums(num1, num2))
-elif choice == 2:
-    print(subtractnums(num1, num2))
-elif choice == 3:
-    print(multiplynums(num1, num2))
-elif choice == 4:
-    print(dividenums(num1, num2))
-else:
-    print('that is not a valid option')
+while choice >= 0:
+    print('Welcome to my simple pyCalculator')
+    num1 = int(input('enter first number'))
+    num2 = int(input('enter second number'))
+    menu()
+    choice: int = int(input('What do you want to do?'))
+
+    if choice == 1:
+        print(addnums(num1, num2))
+    elif choice == 2:
+        print(subtractnums(num1, num2))
+    elif choice == 3:
+        print(multiplynums(num1, num2))
+    elif choice == 4:
+        print(dividenums(num1, num2))
+    else:
+        choice = -1
+
+# exit program
+print('Thank you for using the calculator')
