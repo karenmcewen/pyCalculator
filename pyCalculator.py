@@ -7,9 +7,25 @@ def menu():
     print('4: Division /')
     print('0: Exit')
     print()
-    print()
 
 
+def addnums(x,y):
+    return x + y
+
+
+def subtractnums(x,y):
+    return x - y
+
+
+def multiplynums(x,y):
+    return x * y
+
+
+def dividenums(x,y):
+    return x/y
+
+
+# main program starts here
 num1 = int(input('enter first number'))
 num2 = int(input('enter second number'))
 menu()
@@ -17,15 +33,13 @@ choice: int = int(input('What do you want to do?'))
 
 if choice == 0:
     print('ending')
-
 elif choice == 1:
-    print(num1 + num2)
-
+    print(addnums(num1, num2))
 elif choice == 2:
-    print(num1 - num2)
+    print(subtractnums(num1, num2))
 elif choice == 3:
-    print(num1 * num2)
+    print(multiplynums(num1, num2))
 elif choice == 4:
-    print(num1 / num2)
+    print(dividenums(num1, num2))
 else:
     print('that is not a valid option')
