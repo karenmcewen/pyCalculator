@@ -24,7 +24,10 @@ def multiplynums(x, y):
 
 
 def dividenums(x, y):
-    return x/y
+    if y == 0:
+        return "Error: Cannot divide by zero"
+    else:
+        return x/y
 
 
 def squarenums(x):
@@ -41,10 +44,10 @@ choice = 0
 while choice >= 0:
     print('Welcome to my simple pyCalculator!')
     print()
-    num1 = int(input('Please enter a number: '))
-    num2 = int(input('Enter a second number: '))
+    num1 = float(input('Please enter a number: '))
+    num2 = float(input('Enter a second number: '))
     menu()
-    choice: int = int(input('What operation would you like to perform? '))
+    choice: float = float(input('What operation would you like to perform? '))
 
     if choice == 1:
         print(str(num1) + " + " + str(num2) + " = " + str(addnums(num1, num2)))
