@@ -7,6 +7,7 @@ def menu():
     print('4: Division /')
     print('5: Square x^2')
     print('6: Exponent x^y')
+    print('7: Square Root x^0.5')
     print('Press any other number to exit')
     print()
 
@@ -38,6 +39,10 @@ def exponentnums(x, y):
     return x ** y
 
 
+def squarerootnums(x):
+    return x ** 0.5
+
+
 # main program starts here
 choice = 0
 
@@ -66,6 +71,9 @@ while choice >= 0:
         print()
     elif choice == 6:
         print(str(num1) + " ^ " + str(num2) + " = " + str(exponentnums(num1, num2)))
+        print()
+    elif choice == 7:
+        print("The square root of " + str(num1) + " = " + str(squarerootnums(num1)))
         print()
     else:
         choice = -1
