@@ -1,4 +1,4 @@
-# this is a simple python calculator that does not use numpy
+# this is a simple python calculator that does not use NumPy
 def menu():
     print('MENU')
     print('1: Add +')
@@ -50,9 +50,12 @@ while choice >= 0:
     print('Welcome to my simple pyCalculator!')
     print()
     num1 = float(input('Please enter a number: '))
+    # catch ValueError if choice is not a number
     num2 = float(input('Enter a second number: '))
+    # catch ValueError if choice is not a number
     menu()
-    choice: float = float(input('What operation would you like to perform? '))
+    choice: int = int(input('What operation would you like to perform? '))
+    # catch ValueError if choice is not an integer
 
     if choice == 1:
         print(str(num1) + " + " + str(num2) + " = " + str(addnums(num1, num2)))
