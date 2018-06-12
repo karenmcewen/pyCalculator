@@ -49,13 +49,24 @@ choice = 0
 while choice >= 0:
     print('Welcome to my simple pyCalculator!')
     print()
-    num1 = float(input('Please enter a number: '))
-    # catch ValueError if choice is not a number
-    num2 = float(input('Enter a second number: '))
-    # catch ValueError if choice is not a number
+    # catch ValueError if num1 or num2 is not a number
+    while True:
+        try:
+            num1 = float(input('Please enter a number: '))
+            num2 = float(input('Enter a second number: '))
+            break
+        except ValueError:
+            print("Please enter numbers only. Try again.")
+
     menu()
-    choice: int = int(input('What operation would you like to perform? '))
     # catch ValueError if choice is not an integer
+    while True:
+        try:
+            choice: int = int(input('What operation would you like to perform? '))
+            break
+        except ValueError:
+            print('You must enter an integer. Please try again.')
+            menu()
 
     if choice == 1:
         print(str(num1) + " + " + str(num2) + " = " + str(addnums(num1, num2)))
